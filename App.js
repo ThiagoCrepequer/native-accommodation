@@ -1,35 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import {ButtonEnviar} from './app/components/Button';
-import {Title} from './app/components/Title';
-import { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Header } from './app/components/Header';
+import { Search } from './app/components/Search';
+import { Nav } from './app/components/Nav';
 
 export default function App() {
-  const [clicks, setClicks] = useState(0);
-  const handlePress = () => setClicks(clicks + 1); 
-
-  return (
-    <>
-      <Title title='Olá, bem vindo!' subtitle="Clique no botão para somar 1" />
-      
-      <View style={styles.container}>
-        <Text style={styles.contador}>{clicks}</Text>
-        <ButtonEnviar title={'Click me!'} onPress={handlePress}/>
-      </View>
-
-      <StatusBar style="auto" />
-    </>
-  );
+	return (
+		<View style={styles.container}>
+			<Header location='Brasília' />
+			<Search />
+			<Nav />
+      		<StatusBar style="auto" />
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  contador: {
-    fontSize: 30,
-    color: 'black'
-  }
+	container: {
+        marginHorizontal: 20,
+	},
 });
