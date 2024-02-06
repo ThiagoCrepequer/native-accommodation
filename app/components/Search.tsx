@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, TextInput, View } from "react-native";
 import { Configuracao, Lupa } from "./Icon";
-import { BotaoPadrao } from "./BotaoPadrao";
+import { BotaoColorido } from "./Botoes/BotaoColorido";
 
 interface ISearch { }
 
@@ -11,15 +11,15 @@ const Search: React.FC<ISearch> = () => {
 			<View style={styles.containerBusca}>
 				<Lupa />
 				<TextInput
-					placeholder="Search addres, or near you"
+					placeholder="Digite o endereço que deseja..."
 					style={styles.textInput}
 				/>
 			</View>
 			
 			<View>
-				<BotaoPadrao>
+				<BotaoColorido>
 					<Configuracao /> 
-				</BotaoPadrao>
+				</BotaoColorido>
 			</View> 
 		</View>
   	);

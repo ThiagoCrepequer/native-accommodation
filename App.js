@@ -6,17 +6,24 @@ import { Nav } from './app/components/Nav';
 
 export default function App() {
 	return (
-		<View style={styles.container}>
-			<Header location='Brasília' />
-			<Search />
+		<>
+			<View style={styles.container}>
+				<Header location='Brasília' />
+				<Search />
+				<StatusBar style="auto" />
+			</View>
+
 			<Nav />
-      		<StatusBar style="auto" />
-		</View>
+
+			<View>
+				
+			</View>
+		</>
 	);
 }
 
 const styles = StyleSheet.create({
 	container: {
-        marginHorizontal: 20,
+		marginHorizontal: 20,
 	},
 });
