@@ -1,15 +1,9 @@
 import React from 'react';
-import { StyleProp, View, ViewStyle } from 'react-native';
+import { View } from 'react-native';
 import { Defs, LinearGradient, Rect, Stop, Svg } from 'react-native-svg';
+import { IBotao } from './IBotao';
 
-interface IButton {
-    width?: number;
-    height?: number;
-    onPress?: () => void;
-    children: React.ReactNode;
-}
-
-const BotaoPadrao: React.FC<IButton> = ({ onPress, width = 52, height = 52, children }) => (
+const BotaoColorido: React.FC<IBotao> = ({ onPress, width = 52, height = 52, children }) => (
         <Svg
             onPress={onPress}
             fill="none"
@@ -47,4 +41,4 @@ const BotaoPadrao: React.FC<IButton> = ({ onPress, width = 52, height = 52, chil
         </Svg>
 )
 
-export { BotaoPadrao };
+export { BotaoColorido };
